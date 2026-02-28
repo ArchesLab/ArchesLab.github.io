@@ -11,7 +11,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://tobiasduerschmid.github.io/" # the base hostname & protocol for your site
 
 title: ArchesLab
-author: Tobias Dürschmid
+author: UCLA ArchesLab
 
 languages: [ 'en' ]
 
