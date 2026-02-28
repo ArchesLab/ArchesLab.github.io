@@ -1,0 +1,102 @@
+---
+title: Writing Guide
+layout: framework
+---
+
+{% assign projects = site.data.researchprojects.projects | where: 'key', 'writingguide' %}
+{% assign project  = projects.first %}
+
+{% include navbar_project_subpage.html title=project.title pubssize=pubs.size project=project %}
+
+{% include header_project.html title=project.title description=project.subtitle%}
+
+
+<section id="Writing Guide">
+  <div class="container">
+  
+    <div class="row">
+      <div class="col-lg-12 text-center">
+          This guide is meant to be a general introduction to scientific writing for non-PhD students. It is meant to be starting point for getting to know the structure and to provide practical advice on the most important aspects (in my opinion).
+          Please <strong>also read Mary Shaw's paper on <a href="https://ieeexplore.ieee.org/document/1201262">"Writing Good Software Engineering Research Papers"</a></strong>.
+            <div style="text-align:left;">
+              <h2 class="page-header">Sections</h2>
+
+              This is a general guide to the typical sections of a scientific paper and their purposes.  Not all papers will have all of these sections, and some papers may have additional sections.  The specific structure of a paper can vary depending on the field, the journal, and the nature of the research.  However, this guide provides a common framework for understanding the typical components of a scientific paper.
+              <h3 class="page-header">Abstract</h3>
+              <ul>
+                <li><strong>Purpose:</strong> To provide a standalone, high-level summary of the entire paper.  To help readers quickly decide if the full paper is relevant to their research or interests. This is the most-read part of the paper, so it should be the most polished section.</li>
+                <li><strong>What it includes:</strong> The core <strong>problem</strong> (what challenge are we addressing and why is it relevant?), the <strong>approach/methods</strong> used (how are we addressing the problem?), the most important <strong>findings</strong> (what did we discover or how did we evaluate our approach?), and the main <strong>conclusion</strong> (what are the implications on the real world).</li>
+                <li><strong>Tips:</strong> Write the abstract last, after the rest of the paper is complete. Keep it concise (typically 150-250 words). In most cases the abstract is a combination of a shortened introduction and a shortened conclusion.</li>
+              </ul>
+
+              <h3 class="page-header">Introduction</h3>
+              <ul>
+                <li><strong>Purpose:</strong> To establish the context and explain <em>why</em> the research was conducted. To hook the reader and clearly define the scope and importance of the study. This section usually takes the most amount of effort to re-phrase, because every sentence counts and every word should be chosen well.</li>
+                <li><strong>What it includes:</strong> Background information on the topic, the specific problem or knowledge gap being addressed, the key idea behind the approach or hypothesis being tested, and a brief outline of the paper's contributions (ideally an itemized list).</li>
+                <li><strong>Notes:</strong> It is fine to overlap with the abstract. A good introduction is written so that the first sentence of each paragraph mirrors the abstract.</li>
+                <li><strong>Tips on Structure:</strong> A good introduction should start from very abstract and general ideas and becomes more specific as it progresses The first paragraph can be written by a very wide audience. Then it becomes more concrete and might be written for a more targetted audience. Then in the end, it goes back to a general audience and broadens up to the implications of the research on the more general field.</li>
+              </ul>
+
+              <h3 class="page-header">Related Work</h3>
+              <ul>
+                <li><strong>Purpose:</strong> To situate the new research within the existing body of knowledge and to prove the authors understand the field and to explicitly show how their new work is different, better, or builds upon what has already been done.</li>
+                <li><strong>What it includes:</strong> A summary of previous studies relevant to the topic, highlighting their strengths and limitations. A comparison of how our work is different from theirs or how our work is based on theirs.</li>
+                <li><strong>Tips on Structure:</strong> Group studies by area. Use subheadings to clearly label each area and make it easier for readers to find relevant information. Whenever possible, discuss a body of work (multiple citataions of similar paper, e.g., "For example, the systems Phriky [62], Phys [38], and Physframe [37] use type checking to find inconsistencies in assignments based on physical units or 3D transformations in ROS code") instead of purely discussing individual studies.</li>
+              </ul>
+
+              <h3 class="page-header">Approach (or Methods / Methodology)</h3>
+              <ul>
+                <li><strong>Purpose:</strong> To explain <em>how</em> the research was conducted. To provide enough precise detail so that another qualified researcher could replicate the study and verify the findings.</li>
+                <li><strong>What it includes:</strong> Detailed descriptions of the experimental design, materials, equipment, algorithms, datasets, or theoretical frameworks used.</li>
+              </ul>
+
+              <h3 class="page-header">Results</h3>
+              <ul>
+                <li><strong>Purpose:</strong> To objectively present the data and findings. To state <em>what</em> was found without bias or subjective interpretation.</li>
+                <li><strong>What it includes:</strong> The raw facts, statistics, graphs, tables, and charts resulting from the approach.</li>
+              </ul>
+
+              <h3 class="page-header">Discussion</h3>
+              <ul>
+                <li><strong>Purpose:</strong> To interpret the results and explain their significance (the "so what?").  To give meaning to the data and demonstrate the broader implications of the findings.</li>
+                <li><strong>What it includes:</strong> An analysis of whether the results answered the research question, how they compare to the "Related Work," and an honest acknowledgment of the study's limitations.</li>
+              </ul>
+              <h3 class="page-header">Conclusions & Future Work</h3>
+              <ul>
+                <li><strong>Purpose:</strong> To provide a final, memorable takeaway. To wrap up the narrative and point to the next steps for the scientific community.</li>
+                <li><strong>What it includes:</strong> A brief restatement of the primary finding, the overall impact of the work on the field, and suggestions for future research directions.</li>
+                <li><strong>Notes:</strong> The conclusions section is NOT supposed to be a summary. The abstract is the summary. A conclusions section should synthesize the findings rather than repeat them and contextualize them.</li>
+              </ul>
+
+              <h2 class="page-header">Style</h2>
+              This is a general guide to the style and tone of a scientific paper.
+              <ul>
+                <li><strong>Clarity:</strong> Use clear and concise language. Use scientific terms when appropriate. Avoid jargon or informal language.</li>
+                <li><strong>Hypothesis vs. Fact vs. Opinion:</strong> Clearly distinguish between <strong>hypotheses</strong> (predictions that we plan to test in the paper), <strong>facts</strong> (observations shown by other cited work or in the data), and <strong>opinions</strong> (subjective recommendations or interpretations that we make) throughout the paper.</li>
+                  Examples: <ul>
+                    <li><strong>Hypotheses:</strong> "To reduce the modeling effort and make formal analysis more accessible in practice, this paper presents a static analysis technique to infer X" </li>
+                    <li><strong>Facts:</strong> "In this course, 17 students across 4 teams successfully designed and implemented a complex system", "Recent graduates often lack important software design skills, such as generating and comparing alternative designs, communicating them effectively, and collaborating across teams [10, 32, 63]" "Robotics systems can be comprised of hundreds of software components, each of which can have complex behavior [10, 45, 76]", "However, ensuring that robotics software systems are safe and operate correctly is hindered by their large size and complexity [42, 54]."</li>
+                    <li><strong>Opinions:</strong> "Therefore, we believe adding additional homework to practice interface descriptions in the first half of the semester would help students", "We believe this discussion particularly helped students grow and integrate all major design skills more than they would have otherwise", "Potential improvements could use interleaving of different model types to train students to identify which aspects of a design are best represented using which type of model", "Therefore, we believe software design is most effectively taught with a large-scale multi-team project that closely simulates the complexity and challenges of professional software development projects"</li>
+                  </ul>
+                <li><strong>Objectivity:</strong> Present information and arguments fairly, without bias (e.g., don't say "The best approach is to...". Instead say "The approach with the highest bug finding accuracy is to...")</li>
+                <li><strong>Precision:</strong> Be specific in your descriptions and avoid vague statements. The more concrete you can be with your words and phrases (while still being correct) the better! (e.g., say "The system was able to process 1000 requests per second" instead of "The system was fast")</li>
+                <li><strong>Consistency:</strong> Use consistent terminology, structure, and punctuation throughout the paper.</li>
+                <li><strong>Skimmable:</strong> Use headings, subheadings, and bullet points to break up text and make it easier to scan. Do not assume that the reader read the previous sections (repetitions are allowed!). Name paragraphs and headings in a way that allows readers to quickly identify if they like to skip it. For example put all important related work into the introduction and all peripheral work in the "related work" section that is mostly intended for reviewers and researchers building on the work. Create an "implementation details" section to which you move all the specific choices you've made that most readers don't care about.</li>
+              </ul>
+
+              <h2 class="page-header">Paragraph Structure</h2>
+              Most paragraphs should follow the pattern of <strong>1. summarize the main point, 2. provide details, 3. summarize the implications</strong>.
+              For example: "Students took more time for this milestone than we anticipated, requiring us to extend the milestone by one week. In the end-of-semester survey, many students said “More time should be given to this milestone because ... some of the members in the group are still in the learning stage of some frontend/backend framework.”. Furthermore, due to the higher workload of picking and learning a framework, students’ time efforts shifted more towards implementation than design, leaving less time to consider alternatives and evaluate the impact of implementation decisions on the system design [48]. Providing more implementation support, specifically on frameworks that might be useful for the project, might help address this issue."
+              The purpose of this structure is to allow readers to skip the paragraph if the first sentences gives them evidence that they don't actually care about this fact.
+              What makes this a bit counter-intuitive for STEM students, is that it leads to making each paragraph <em>start</em> with the conclusion, then provide the evidence for the claim, which is usually the opposite of how you were taught in in school, but it is optimized for reading speed. If you believe that this structure does not work well (which is often the case for empirical research where results need a lot of context to be understood), you may keep the main claim in the end but put a box around it or bold the sentence. 
+          </div>
+        </div>
+
+
+    </div>
+
+
+
+  </div>
+</section>
+

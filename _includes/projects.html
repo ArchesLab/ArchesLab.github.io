@@ -1,0 +1,22 @@
+
+<section id="projects">
+  <div class="container">
+  
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="page-header">{{ site.data.projects.heading.[page.lang] | escape }}</h2>
+      </div>
+    </div>
+
+  {% assign all_projects = site.data.projects.projects %}
+
+  {% assign projects = all_projects | where: "ongoing", true | sort:"date" %}
+  {% assign legend = "Current Projects" %}
+  {% include projects_section.html %}
+  
+  {% assign projects = all_projects | where: "ongoing", false | sort:"date" %}
+  {% assign legend = "Past Projects" %}
+  {% include projects_section.html %}
+
+</div>
+</section>

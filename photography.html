@@ -1,0 +1,9 @@
+---
+title: Photography
+layout: framework
+---
+
+{% assign projects = site.data.researchprojects.projects | where: 'key', 'photography' %}
+{% assign project  = projects.first %}
+
+{% include researchproject.html %}

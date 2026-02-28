@@ -1,0 +1,9 @@
+---
+title: Trade-off-oriented Development
+layout: framework
+---
+
+{% assign projects = site.data.researchprojects.projects | where: 'key', 'TOD' %}
+{% assign project  = projects.first %}
+
+{% include researchproject.html %}
