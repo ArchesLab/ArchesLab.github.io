@@ -5,51 +5,26 @@ plugins:
 env: production
 
 # Site settings
-timezone: Europe/Berlin
+timezone: US/Pacific
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://tobiasduerschmid.github.io/" # the base hostname & protocol for your site
 
-title: Tobias Dürschmid
+title: ArchesLab
 author: Tobias Dürschmid
 
-
-authorexplainname : How to spell my name?
-authorexplain: >
-  The umlaut <strong>ü</strong> in my last name Dürschmid is significant for the pronunciation and the spelling. 
-  <br>
-  The valid ASCII spelling is <strong>Tobias Duerschmid</strong>, not Tobias Durschmid. 
-  <br>
-  To correctly typeset my name in LaTeX or BibTeX please use <strong>D{\"u}rschmid</strong> or <a href="https://stackoverflow.com/questions/1252998/how-can-i-compile-latex-in-utf8" target="_blank">use UTF-8 encoding</a>.
-
-portrait: "/img/tobi.jpg"
-
-languages: [ 'en', 'de' ]
+languages: [ 'en' ]
 
 description: > # theis means to ignore newlines until "baseurl:"
-    Tobias Dürschmid - Assistant Teaching Professor at UCLA.
+    UCLA ArchesLab  - Architectures of Evolving Software Lab.
 subheading: > # this means to ignore newlines until "baseurl:"
-    I am an <span class="text-danger">Assistant Teaching Professor in Computer Science</span> at <a href="http://www.cs.ucla.edu/" target="_blank">UCLA</a>. 
-    I am mainly interested in  <span class="text-danger">teaching how to systematically design, construct, and evaluate complex software systems</span>.
-    I usually teach CS 35 Software Construction, CS 130 Sofware Engineering, and CS 131 Programming Languagues.
-    
-    <br><br>
-    I received my <span class="text-danger">PhD in Software Engineering</span> from Carnegie Mellon University’s <a href="http://www.scs.cmu.edu/" target="_blank">School of Computer Science</a>. 
-    I was fortunate to be co-advised by <a href="https://clairelegoues.com/" target="_blank">Claire Le Goues</a> and <a href="http://www.cs.cmu.edu/~garlan/" target="_blank">David Garlan</a>.
-    I earned my Bachelor of Science in IT-Systems Engineering from <a href="https://www.hpi.de/en/" target="_blank">Hasso Plattner Institute</a> / University of Postdam, Germany.
-    <br><br>
-    My research interests include <span class="text-danger">software engineering, computer science education, and pedagogy</span>.
-    I do <strong>not</strong> currently accept PhD students. 
-    
+    We are a research lab at UCLA focused on the design and implementation of software architectures.
+
 defaults:
   - scope:
       path: ''
     values:
       lang: en
-  - scope:
-      path: 'de'
-    values:
-      lang: de
   - scope:
       path: 'en'
     values:
