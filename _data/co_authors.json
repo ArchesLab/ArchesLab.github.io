@@ -3,6 +3,8 @@
 	[ 
 		{ "key"     : "me",
 	      "name"  	: "Tobias Dürschmid",
+		  "website" : "https://tobiasduerschmid.github.io/",
+	      "note" 	: "Tobias Dürschmid is an Assistant Teaching Professor in Computer Science at UCLA.",
 	    },
 	    { "key"     : "CLG",
 	      "name"  	: "Claire Le Goues",
